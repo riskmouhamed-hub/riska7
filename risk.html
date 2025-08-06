@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMING_NINJA | Official Streamer Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8a2be2;
+            --primary-light: #9d4edd;
+            --primary-dark: #6a0dad;
+            --secondary: #00c9b8;
+            --youtube: #ff0000;
+            --instagram: #e1306c;
+            --discord: #5865F2;
+            --dark: #121212;
+            --darker: #0a0a0a;
+            --card: rgba(30, 30, 40, 0.95);
+            --text: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(138, 43, 226, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(0, 201, 184, 0.05) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+            animation: pulse 2s infinite;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .streamer-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 0.3s;
+        }
+
+        .streamer-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .streamer-avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 5px solid var(--primary);
+            margin: 0 auto 25px;
+            overflow: hidden;
+            background: #000;
+            box-shadow: 0 0 40px rgba(138, 43, 226, 0.5);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .streamer-avatar:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px rgba(138, 43, 226, 0.7);
+        }
+
+        .streamer-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .streamer-name {
+            font-size: 46px;
+            font-weight: 800;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 1px;
+        }
+
+        .streamer-title {
+            font-size: 24px;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 35px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            min-width: 140px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .stat-value {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+        }
+
+        .stat-label {
+            font-size: 18px;
+            color: var(--text-secondary);
+        }
+
+        /* Platforms Section */
+        .platforms {
+            padding: 80px 0 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 60px;
+            position: relative;
+            display: inline-block;
+            padding: 0 20px;
+            font-weight: 800;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+
+        .platform-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .platform-card {
+            background: var(--card);
+            border-radius: 15px;
+            padding: 35px 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+            border-top: 5px solid;
+            transform: translateY(30px);
+            opacity: 0;
+        }
+
+        .platform-card:nth-child(1) {
+            animation: fadeUp 0.6s forwards 0.5s;
+        }
+        .platform-card:nth-child(2) {
+            animation: fadeUp 0.6s forwards 0.7s;
+        }
+        .platform-card:nth-child(3) {
+            animation: fadeUp 0.6s forwards 0.9s;
+        }
+
+        .platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .platform-card.kick {
+            border-color: var(--primary);
+        }
+
+        .platform-card.youtube {
+            border-color: var(--youtube);
+        }
+
+        .platform-card.instagram {
+            border-color: var(--instagram);
+        }
+
+        .platform-icon {
+            font-size: 64px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover .platform-icon {
+            transform: scale(1.1);
+        }
+
+        .kick .platform-icon {
+            color: var(--primary);
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+        }
+
+        .youtube .platform-icon {
+            color: var(--youtube);
+            text-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+        }
+
+        .instagram .platform-icon {
+            color: var(--instagram);
+            text-shadow: 0 0 15px rgba(225, 48, 108, 0.4);
+        }
+
+        .platform-name {
+            font-size: 28px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .platform-username {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--text-secondary);
+            background: rgba(0,0,0,0.3);
+            padding: 8px 15px;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 500;
+        }
+
+        .btn-platform {
+            display: inline-block;
+            padding: 14px 35px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-platform::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            transition: width 0.5s ease;
+            z-index: -1;
+        }
+
+        .btn-platform:hover::before {
+            width: 100%;
+        }
+
+        .btn-kick {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-kick::before {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-youtube {
+            background: var(--youtube);
+            color: white;
+        }
+
+        .btn-youtube::before {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-instagram {
+            background: var(--instagram);
+            color: white;
+        }
+
+        .btn-instagram::before {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .btn-platform:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Live Stream */
+        .live-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .live-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 1.1s;
+        }
+
+        .live-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+
+        .live-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary);
+            padding: 10px 30px;
+            border-radius: 50px;
+            margin-bottom: 30px;
+            animation: pulse 1.5s infinite;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(138, 43, 226, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(138, 43, 226, 0); }
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .live-badge i {
+            margin-right: 10px;
+        }
+
+        .live-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .live-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-secondary);
+        }
+
+        .stream-embed {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(45deg, #0f0f1a, #1a1a2a);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 30px auto;
+            border: 2px solid rgba(138, 43, 226, 0.3);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stream-placeholder {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .stream-placeholder i {
+            font-size: 80px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .stream-placeholder h3 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .stream-placeholder p {
+            font-size: 18px;
+            max-width: 500px;
+            margin: 0 auto;
+            color: var(--text-secondary);
+        }
+
+        /* Discord Community */
+        .discord-section {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--dark), var(--darker));
+        }
+
+        .discord-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card);
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+            border-top: 5px solid var(--discord);
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeUp 0.8s forwards 1.4s;
+        }
+
+        .discord-icon {
+            font-size: 80px;
+            color: var(--discord);
+            margin-bottom: 25px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .discord-title {
+            font-size: 38px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .discord-description {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--text-secondary);
+        }
+
+        .discord-members {
+            font-size: 26px;
+            color: var(--discord);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .discord-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .feature {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            width: 220px;
+            border: 1px solid rgba(88, 101, 242, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+            border-color: var(--discord);
+        }
+
+        .feature i {
+            font-size: 40px;
+            color: var(--discord);
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 15, 0.98);
+            padding: 60px 0 20px;
+            border-top: 1px solid rgba(138, 43, 226, 0.2);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h3 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: var(--primary);
+            position: relative;
+            padding-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: var(--text);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            display: inline-block;
+            font-size: 17px;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--text);
+            transition: all 0.3s ease;
+            font-size: 22px;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            background: var(--primary);
+        }
+
+        .social-links .youtube:hover {
+            background: var(--youtube);
+        }
+
+        .social-links .instagram:hover {
+            background: var(--instagram);
+        }
+
+        .social-links .discord:hover {
+            background: var(--discord);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 16px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .streamer-name {
+                font-size: 36px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .stream-embed {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 0 60px;
+            }
+            
+            .streamer-name {
+                font-size: 32px;
+            }
+
+            .streamer-title {
+                font-size: 20px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .live-title {
+                font-size: 28px;
+            }
+
+            .stream-embed {
+                height: 300px;
+            }
+
+            .platform-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .streamer-avatar {
+                width: 130px;
+                height: 130px;
+            }
+            
+            .stat-value {
+                font-size: 32px;
+            }
+            
+            .btn-platform {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="logo-text">GAMING_risk</div>
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#platforms">Channels</a>
+                    <a href="#live">Live Stream</a>
+                    <a href="#discord">Community</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="streamer-card">
+                <div class="streamer-avatar">
+                    <img src="https://media.discordapp.net/attachments/1401708795553382599/1402065274349293639/GAMING_NINJA_Avatar.png?ex=68928e8a&is=68913d0a&hm=af0e5161d2a2290d7a04f5d3860f045cfed72538a85ec6dfcfa8aae4299bb0e1&=&format=webp&quality=lossless" alt="GAMING_NINJA Avatar">
+                </div>
+                <h1 class="streamer-name">GAMING_risk</h1>
+                <p class="streamer-title">Professional Streamer • Gaming Content • Daily Streams</p>
+                <p style="font-size: 18px; max-width: 600px; margin: 0 auto; opacity: 0.9;">
+                    Welcome to the official channel! Join me for the best gaming content, tutorials, competitions, and daily live streams. Let's build an amazing community together!
+                </p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value">5k</div>
+                        <div class="stat-label">Followers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">60</div>
+                        <div class="stat-label">Subscribers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">100k</div>
+                        <div class="stat-label">Views</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms Section -->
+    <section class="platforms" id="platforms">
+        <div class="container">
+            <h2 class="section-title">My Channels</h2>
+            <div class="platform-cards">
+                <!-- KICK Card -->
+                <div class="platform-card kick">
+                    <div class="platform-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="platform-name">KICK</h3>
+                    <div class="platform-username">risk_h1</div>
+                    <p>Join me on KICK for daily live streams, exclusive content, and direct interaction with the community.</p>
+                    <a href="https://kick.com/risk-h1" target="_blank" class="btn-platform btn-kick">
+                        <i class="fas fa-bolt"></i> Follow on KICK
+                    </a>
+                </div>
+                
+                <!-- YouTube Card -->
+                <div class="platform-card youtube">
+                    <div class="platform-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <h3 class="platform-name">YouTube</h3>
+                    <div class="platform-username">@risk_h1</div>
+                    <p>My YouTube channel features highlights, tutorials, game reviews, and exclusive content.</p>
+                    <a href="https://www.youtube.com/@RISK_h1" target="_blank" class="btn-platform btn-youtube">
+                        <i class="fab fa-youtube"></i> Subscribe
+                    </a>
+                </div>
+                
+                <!-- Instagram Card -->
+                <div class="platform-card instagram">
+                    <div class="platform-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <h3 class="platform-name">Instagram</h3>
+                    <div class="platform-username">@mouhamed_h1</div>
+                    <p>Follow me on Instagram for daily stories, updates, and behind-the-scenes content.</p>
+                    <a href="https://www.instagram.com/mouhamed_h1/" target="_blank" class="btn-platform btn-instagram">
+                        <i class="fab fa-instagram"></i> Follow on Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Stream Section -->
+    <section class="live-section" id="live">
+        <div class="container">
+            <div class="live-container">
+                <div class="live-badge">
+                    <i class="fas fa-circle"></i> Live Now on KICK
+                </div>
+                <h2 class="live-title">Live Stream: Valorant Tournament</h2>
+                <p class="live-description">
+                    Join me now for an intense Valorant tournament with top players and amazing prizes! Interact with me live on KICK.
+                </p>
+                
+                <div class="stream-embed">
+                    <div class="stream-placeholder">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Currently Live on KICK</h3>
+                        <p>Join the stream now for live gameplay and interaction!</p>
+                    </div>
+                </div>
+                
+                <a href="https://kick.com/risk-h1" target="_blank" class="btn-platform btn-kick" style="padding: 15px 40px; font-size: 18px;">
+                    <i class="fas fa-bolt"></i> Watch on KICK
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord Community -->
+    <section class="discord-section" id="discord">
+        <div class="container">
+            <div class="discord-container">
+                <div class="discord-icon">
+                    <i class="fab fa-discord"></i>
+                </div>
+                <h2 class="discord-title">Join My Discord Community</h2>
+                <p class="discord-description">
+                    Connect with fellow gamers, get stream notifications, participate in exclusive events, and chat with me directly!
+                </p>
+                
+                <div class="discord-members">1,500+ Active Members</div>
+                
+                <a href="https://discord.gg/FkZTuhpN" target="_blank" class="btn-platform" style="background: var(--discord); padding: 15px 40px; font-size: 18px;">
+                    <i class="fab fa-discord"></i> Join Discord Server
+                </a>
+                
+                <div class="discord-features">
+                    <div class="feature">
+                        <i class="fas fa-comments"></i>
+                        <h3>Live Chat</h3>
+                        <p>Chat during streams</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gaming Parties</h3>
+                        <p>Join community games</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gift"></i>
+                        <h3>Exclusive Rewards</h3>
+                        <p>Special perks for members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Me</h3>
+                    <p>Professional streamer creating gaming content for an international audience. Daily streams, tutorials, and community events.</p>
+                    <div class="social-links">
+                        <a href="https://kick.com/risk-h1" target="_blank" class="kick"><i class="fas fa-bolt"></i></a>
+                        <a href="https://www.youtube.com/@RISK_h1" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/mouhamed_h1/" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://discord.gg/FkZTuhpN" target="_blank" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#platforms">Channels</a></li>
+                        <li><a href="#live">Live Stream</a></li>
+                        <li><a href="#discord">Community</a></li>
+                        <li><a href="#">Schedule</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Games I Play</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Valorant</a></li>
+                        <li><a href="#">Fortnite</a></li>
+                        <li><a href="#">Call of Duty</a></li>
+                        <li><a href="#">Apex Legends</a></li>
+                        <li><a href="#">New Releases</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Me</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-envelope"></i> mouhamedhasnaui@gmail.c</li>
+                        <li><i class="fas fa-headset"></i> Support Center</li>
+                        <li><i class="fas fa-handshake"></i> Collaborations</li>
+                        <li><i class="fas fa-briefcase"></i> Business Inquiries</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 GAMING_risk. All Rights Reserved | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = "rgba(10, 10, 15, 0.98)";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.8)";
+            } else {
+                header.style.background = "rgba(18, 18, 18, 0.95)";
+                header.style.boxShadow = "0 5px 20px rgba(0, 0, 0, 0.7)";
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Live status simulation
+        setInterval(() => {
+            const liveBadge = document.querySelector('.live-badge');
+            if (Math.random() > 0.3) {
+                liveBadge.style.display = 'inline-flex';
+                document.querySelector('.live-title').textContent = "Live Stream: Valorant Tournament";
+            } else {
+                liveBadge.style.display = 'none';
+                document.querySelector('.live-title').textContent = "Next Stream: Coming Soon";
+            }
+        }, 8000);
+
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            document.querySelectorAll('.platform-card, .streamer-card, .live-container, .discord-container').forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
